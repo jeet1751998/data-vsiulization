@@ -1,0 +1,48 @@
+<html>
+    <head>
+    <title> </title>
+    <script src="https://d3js.org/d3.v5.min.js">
+        </script>
+        </head>
+    <body>
+        <div id="viazcontainer">
+            <svg style="width:500px; height:500px; border: 1px blue solid; "></svg>
+</div>
+        <script> 
+        
+          
+          d3.select("svg")
+            .append("rect")
+            .attr("width",100)
+            .attr("height", 100)
+            .attr("x", 0)
+            .attr("y", 400)
+            .style("fill", "red");
+          
+           d3.select("svg")
+            .append("circle")
+            
+            .attr("r",60)
+            .attr("cx", 440)
+            .attr("cy", 440)
+            .style("fill", "lightblue");
+          
+       
+            d3.selectAll("rect")
+            .transition()
+            .duration(2000)
+            .style("opacity", 0)
+            .attr("y", 0);
+          
+          d3.selectAll("circle")
+            .transition()
+            .duration(2000)
+            
+            .style("opacity", 0)
+            .attr("cy", 60);
+            
+        </script>
+    
+    </body>
+   
+</html>
